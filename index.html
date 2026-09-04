@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="lhx，I am a code mover." />
+    <meta name="theme-color" content="#f4f2ed" />
+    <title>lhx | I am a code mover.</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f2ed;
+        --ink: #171715;
+        --muted: #69665f;
+        --accent: #b53a2b;
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      html,
+      body { height: 100%; }
+
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--sans);
+        letter-spacing: 0;
+      }
+
+      a { color: inherit; text-decoration: none; }
+
+      .page {
+        min-height: 100dvh;
+        padding: 32px;
+        display: grid;
+        place-items: center;
+      }
+
+      main { width: min(100%, 620px); }
+      .intro { width: 100%; }
+      .profile { margin-bottom: 36px; display: flex; align-items: center; gap: 16px; }
+      .avatar { width: 64px; height: 64px; flex: 0 0 auto; }
+      .profile p { margin: 0; }
+      .name { font-family: var(--serif); font-size: 21px; font-weight: 700; }
+      .role { margin-top: 6px !important; color: var(--muted); font-size: 9px; text-transform: uppercase; }
+
+      .intro h1 {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 76px;
+        font-weight: 400;
+        line-height: 0.96;
+      }
+
+      .intro h1 em { font-weight: 400; }
+      .summary { max-width: 430px; margin: 36px 0 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+      .links { margin-top: 32px; }
+      .links a { display: inline-block; padding-bottom: 4px; border-bottom: 1px solid var(--accent); color: var(--accent); font-size: 11px; font-weight: 650; }
+
+      @media (max-width: 700px) {
+        .page { padding: 22px; place-items: center start; }
+        main { max-width: 470px; }
+        .profile { margin-bottom: 26px; }
+        .avatar { width: 52px; height: 52px; }
+        .name { font-size: 18px; }
+        .role { font-size: 8px; }
+        .intro h1 { font-size: 52px; }
+        .summary { margin-top: 24px; font-size: 12px; line-height: 1.65; }
+        .links { margin-top: 24px; }
+      }
+
+      @media (max-height: 520px) {
+        .profile { margin-bottom: 20px; }
+        .intro h1 { font-size: 44px; }
+        .summary { margin-top: 18px; }
+        .links { margin-top: 18px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <main>
+        <section class="intro" aria-labelledby="intro-title">
+          <div class="profile">
+            <svg class="avatar" viewBox="0 0 24 24" role="img" aria-label="GitHub">
+              <path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2A11.5 11.5 0 0 1 12 6.3c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.1c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z" />
+            </svg>
+            <div>
+              <p class="name">lhx</p>
+              <p class="role">AI Product Engineer · Hangzhou</p>
+            </div>
+          </div>
+          <h1 id="intro-title">I am a<br /><em>code mover.</em></h1>
+          <p class="summary">Tokens on: coding god. Tokens off: mortal again.</p>
+          <nav class="links" aria-label="个人链接">
+            <a href="https://github.com/lhx-io" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </nav>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
